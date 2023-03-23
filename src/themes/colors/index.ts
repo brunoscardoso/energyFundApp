@@ -13,9 +13,9 @@ const colors: DefaultTheme = {
       primary: '#FFF',
     },
     gray: {
-      primary: '#606073',
-      secondary: '#888899',
-      tertiary: '#CACAD8',
+      primary: '#A0A0A0',
+      secondary: '#CFCFCF',
+      tertiary: '#f8f4f4',
     },
   },
 };

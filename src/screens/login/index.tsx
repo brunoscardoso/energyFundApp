@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Header from 'components/Header';
 import Input from 'components/Input';
 import Button from 'components/Button';
 
@@ -9,7 +10,8 @@ export default function Login() {
   return (
     <S.SafeArea>
       <S.Container>
-        <S.Title>Login</S.Title>
+        <Header title="Login" />
+
         <Input label="E-mail" value="john@doe.com" />
         <Input label="Password" placeholder="Minimum 8 characters" />
 

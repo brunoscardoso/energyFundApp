@@ -1,6 +1,6 @@
 import Home from 'screens/home';
-import SignUp from 'screens/signup';
-import Login from 'screens/login';
+import SignUp from 'screens/onboarding/signup';
+import Login from 'screens/onboarding/login';
 
 const routesDefinitions = {
   signup: {

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Header from 'components/Header';
-import Input from 'components/Input';
-import Button from 'components/Button';
-import TextButton from 'components/TextButton';
+import Header from 'screens/onboarding/components/header';
+import Input from 'components/input';
+import Button from 'components/button';
+import TextButton from 'screens/onboarding/components/textButton';
 
 import * as S from './styles';
 
@@ -16,7 +16,7 @@ export default function Login({navigation}) {
         <Input label="E-mail" value="john@doe.com" />
         <Input label="Password" placeholder="Minimum 8 characters" />
 
-        <Button label="Login" onPress={() => console.log('xd')} />
+        <Button label="Login" onPress={() => navigation.navigate('home')} />
 
         <TextButton
           label={"Don't have account?"}

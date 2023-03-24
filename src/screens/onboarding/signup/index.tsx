@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Header from 'components/Header';
-import Input from 'components/Input';
-import Button from 'components/Button';
-import TextButton from 'components/TextButton';
+import Header from 'screens/onboarding/components/header';
+import Input from 'components/input';
+import Button from 'components/button';
+import TextButton from 'screens/onboarding/components/textButton';
 
 import * as S from './styles';
 

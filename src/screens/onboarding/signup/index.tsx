@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import Input from 'components/input';
 import Button from 'components/button';
+import Checkbox from 'components/checkbox';
 import AvoidKeyboard from 'components/avoidKeyboard';
 import Header from 'screens/onboarding/components/header';
 import TextButton from 'screens/onboarding/components/textButton';
@@ -23,6 +24,11 @@ export default function SignUp({navigation}) {
           <Input label="Last Name" value="Smith" />
           <Input label="E-mail" value="john@doe.com" />
           <Input label="Password" placeholder="Minimum 8 characters" />
+
+          <Checkbox
+            label="I am over 18 years of age and I have read and agree to the"
+            labelUnderline="Terms of Service and Privacy policy"
+          />
 
           <Button label="Create account" onPress={() => console.log('xd')} />
 

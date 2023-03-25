@@ -20,10 +20,10 @@
       "types/*": ["types/*"],
       "assets/*": ["assets/*"],
       "components/*": ["components/*"],
-      "redux/*": ["redux/*"],
       "hooks/*": ["hooks/*"],
       "routes/*": ["routes/*"],
       "screens/*": ["screens/*"],
+      "utils/*": ["utils/*"],
       "themes/*": ["themes/*"],
     },
     "typeRoots": ["./src/types", "./node_modules/@types"]

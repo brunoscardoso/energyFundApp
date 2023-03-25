@@ -8,6 +8,7 @@ const colors: DefaultTheme = {
     },
     purple: {
       primary: '#770FDF',
+      tertiary: '#F7EDFF80',
     },
     dark: {
       primary: '#000',

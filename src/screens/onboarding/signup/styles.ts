@@ -4,8 +4,3 @@ export const SafeArea = styled.SafeAreaView`
   flex: 1;
   background-color: white;
 `;
-
-export const Container = styled.View`
-  flex: 1;
-  background-color: white;
-`;

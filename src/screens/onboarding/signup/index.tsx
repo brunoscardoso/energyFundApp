@@ -11,7 +11,7 @@ import TextButton from 'screens/onboarding/components/textButton';
 import sleep from 'utils/sleep';
 import Loader from 'components/loader';
 
-import {userSlice} from '../../../redux/slices/userSlice';
+import {userSlice} from 'reduxPath/slices/userSlice';
 
 import * as S from './styles';
 
@@ -27,8 +27,8 @@ export default function SignUp({navigation}) {
 
   async function handleSignup() {
     setLoading(true);
-    await sleep(4000);
     // SIMULATE API
+    await sleep(3000);
     // const response = await axios.post('/create-user', {
     //   firstName,
     //   lastName,
@@ -46,58 +46,59 @@ export default function SignUp({navigation}) {
         email,
       }),
     );
+
+    navigation.navigate('home');
   }
 
   return (
     <S.SafeArea>
       <Loader loading={loading} />
-      <S.Container>
-        <Header
-          title="Login"
-          totalSteps={3}
-          onPress={() => navigation.goBack()}
+
+      <Header
+        title="Login"
+        totalSteps={3}
+        onPress={() => navigation.goBack()}
+      />
+
+      <AvoidKeyboard>
+        <Input
+          label="First Name"
+          placeholder="Type your name"
+          value={firstName}
+          onChangeText={setFirstName}
+        />
+        <Input
+          label="Last Name"
+          placeholder="Type your last name"
+          value={lastName}
+          onChangeText={setLastName}
+        />
+        <Input
+          label="E-mail"
+          placeholder="Type your email"
+          value={email}
+          onChangeText={setEmail}
+        />
+        <Input
+          label="Password"
+          placeholder="Minimum 8 characters"
+          value={password}
+          onChangeText={setPassword}
         />
 
-        <AvoidKeyboard>
-          <Input
-            label="First Name"
-            placeholder="Type your name"
-            value={firstName}
-            onChangeText={setFirstName}
-          />
-          <Input
-            label="Last Name"
-            placeholder="Type your last name"
-            value={lastName}
-            onChangeText={setLastName}
-          />
-          <Input
-            label="E-mail"
-            placeholder="Type your email"
-            value={email}
-            onChangeText={setEmail}
-          />
-          <Input
-            label="Password"
-            placeholder="Minimum 8 characters"
-            value={password}
-            onChangeText={setPassword}
-          />
+        <Checkbox
+          label="I am over 18 years of age and I have read and agree to the"
+          labelUnderline="Terms of Service and Privacy policy"
+        />
 
-          <Checkbox
-            label="I am over 18 years of age and I have read and agree to the"
-            labelUnderline="Terms of Service and Privacy policy"
-          />
+        <Button label="Create account" onPress={() => handleSignup()} />
 
-          <Button label="Create account" onPress={() => handleSignup()} />
-
-          <TextButton
-            label={'Already have an account?'}
-            subLabel="Login in here"
-            onPress={() => navigation.navigate('login')}
-          />
-        </AvoidKeyboard>
-      </S.Container>
+        <TextButton
+          label={'Already have an account?'}
+          subLabel="Login in here"
+          onPress={() => navigation.navigate('login')}
+        />
+      </AvoidKeyboard>
     </S.SafeArea>
   );
 }

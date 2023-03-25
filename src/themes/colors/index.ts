@@ -6,8 +6,12 @@ const colors: DefaultTheme = {
       primary: '#888899',
       contrastPrimary: '#FFF',
     },
+    green: {
+      primary: '#0FDF8F',
+    },
     purple: {
       primary: '#770FDF',
+      secondary: '#F7EFFF',
       tertiary: '#F7EDFF80',
     },
     dark: {

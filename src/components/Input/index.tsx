@@ -7,6 +7,7 @@ interface IProps {
   label: string;
   placeholder?: string;
   value?: any;
+  secureTextEntry?: boolean;
 }
 
 export default function Input({
@@ -14,11 +15,15 @@ export default function Input({
   label,
   value,
   placeholder,
+  secureTextEntry,
 }: IProps) {
   return (
     <S.Container>
       <S.Label>{label}</S.Label>
-      <S.InputText placeholder={placeholder} onChangeText={onChangeText}>
+      <S.InputText
+        secureTextEntry={secureTextEntry}
+        placeholder={placeholder}
+        onChangeText={onChangeText}>
         {value}
       </S.InputText>
     </S.Container>

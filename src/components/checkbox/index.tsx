@@ -12,7 +12,7 @@ export default function Checkbox({label, labelUnderline}: IProps) {
   const [checked, setChecked] = useState<boolean>(false);
   return (
     <S.Container onPress={() => setChecked(!checked)}>
-      <S.CheckboxInput checked={checked} />
+      <S.CheckboxInput>{checked && <S.Check />}</S.CheckboxInput>
 
       <S.LabelContainer>
         <S.Label>{label}</S.Label>

@@ -17,6 +17,7 @@ module.exports = {
           hooks: './src/hooks',
           routes: './src/routes',
           screens: './src/screens',
+          reduxPath: './src/redux',
           utils: './src/utils',
           themes: './src/themes',
         },

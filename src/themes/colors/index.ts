@@ -20,6 +20,9 @@ const colors: DefaultTheme = {
     light: {
       primary: '#FFF',
     },
+    red: {
+      secondary: '#EE8688',
+    },
     gray: {
       primary: '#A0A0A0',
       secondary: '#CFCFCF',

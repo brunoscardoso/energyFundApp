@@ -12,7 +12,7 @@ export default function Home({navigation}) {
     {
       id: 1,
       title: 'Wind Fund',
-      value: '$1032.23',
+      value: 1032.23,
       percentual: 3.8,
       type: 'wind',
       positive: true,
@@ -20,7 +20,7 @@ export default function Home({navigation}) {
     {
       id: 2,
       title: 'Solar Fund',
-      value: '$986.61',
+      value: 986.61,
       percentual: 2.9,
       type: 'solar',
       positive: false,
@@ -28,7 +28,7 @@ export default function Home({navigation}) {
     {
       id: 3,
       title: 'Natural Fund',
-      value: '$1122.13',
+      value: 1122.13,
       percentual: 5,
       type: 'natural',
       positive: true,

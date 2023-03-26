@@ -61,7 +61,7 @@ export default function FundsCard({
       </S.ChartContainer>
 
       <S.ValuesContainer>
-        <S.LabelValue>{value}</S.LabelValue>
+        <S.LabelValue>${value}</S.LabelValue>
         <S.PercentualContainer>
           {positive ? (
             <S.PercentualPositiveIcon />

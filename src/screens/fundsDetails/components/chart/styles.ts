@@ -2,7 +2,9 @@ import styled from 'styled-components/native';
 import IconPercentualSvg from 'assets/arrow_up_right.svg';
 import IconPercentualNegativeSvg from 'assets/arrow_down_right.svg';
 
-export const Container = styled.View``;
+export const Container = styled.View`
+  flex: 1;
+`;
 
 export const BigBoldTitle = styled.Text`
   font-size: 26px;
@@ -59,3 +61,21 @@ export const FloatLabelDown = styled.Text`
 `;
 
 export const TimelineList = styled.FlatList``;
+
+export const TimelineButton = styled.TouchableOpacity<{selected: boolean}>`
+  height: 40px;
+  width: 35px;
+  border-radius: 4px;
+  background-color: ${({theme, selected}) =>
+    selected ? theme.palette.purple.tertiary : 'transparent'};
+  justify-content: center;
+  align-items: center;
+  margin: 0 14px;
+`;
+
+export const TimelineLabel = styled.Text<{selected: boolean}>`
+  font-size: 16px;
+  font-weight: 600;
+  color: ${({theme, selected}) =>
+    selected ? theme.palette.purple.primary : theme.palette.gray.secondary};
+`;

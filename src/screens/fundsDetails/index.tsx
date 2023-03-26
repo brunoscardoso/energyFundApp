@@ -13,13 +13,16 @@ export default function FundsDetails({route: {params}, navigation}: any) {
         subTitle={params.title}
         onPress={() => navigation.goBack()}
       />
-      <S.Container>
-        <Chart
-          percentual={params.percentual}
-          positive={params.positive}
-          value={params.value}
-        />
-      </S.Container>
+
+      <S.ScrollView>
+        <S.Container>
+          <Chart
+            percentual={params.percentual}
+            positive={params.positive}
+            value={params.value}
+          />
+        </S.Container>
+      </S.ScrollView>
     </S.SafeAreaView>
   );
 }

@@ -3,6 +3,7 @@ import React from 'react';
 import Header from 'components/header';
 import FundsCard from 'components/fundsCard';
 import Banner from 'components/banner';
+import Menu from 'components/menu';
 
 import * as S from './styles';
 
@@ -60,6 +61,8 @@ export default function Home() {
           />
         </S.ListContainer>
         <Banner />
+
+        <Menu />
       </S.Container>
     </S.SafeArea>
   );

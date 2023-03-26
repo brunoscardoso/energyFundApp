@@ -27,6 +27,12 @@ export const Label = styled.Text`
   margin-top: 8px;
 `;
 
+export const ChartContainer = styled.View`
+  height: 100px;
+
+  margin-bottom: 8px;
+`;
+
 export const LabelValue = styled.Text`
   font-size: 16px;
   font-weight: 200;

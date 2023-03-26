@@ -21,7 +21,7 @@ export default function Home() {
       id: 2,
       title: 'Solar Fund',
       value: '$986.61',
-      percentual: 3.5,
+      percentual: 2.9,
       type: 'solar',
       positive: false,
     },
@@ -35,34 +35,55 @@ export default function Home() {
     },
   ];
 
+  const mockBanners = [
+    {title: 'Why should you invest here?'},
+    {title: 'Why should you invest here?'},
+  ];
+
   return (
     <S.SafeArea>
       <Header />
       <S.Container>
-        <S.Title>Funds</S.Title>
+        <S.ScrollView showsVerticalScrollIndicator={false}>
+          <S.Title>Funds</S.Title>
 
-        <S.ListContainer>
-          <S.ListFunds
+          <S.ListContainer>
+            <S.ListFunds
+              showsHorizontalScrollIndicator={false}
+              horizontal
+              key={idx => idx}
+              data={mockFunds}
+              renderItem={({item}) => {
+                return (
+                  <FundsCard
+                    title={item.title}
+                    value={item.value}
+                    percentual={item.percentual}
+                    type={item.type}
+                    positive={item.positive}
+                  />
+                );
+              }}
+            />
+          </S.ListContainer>
+          <Banner />
+
+          <S.ListBanners
             showsHorizontalScrollIndicator={false}
             horizontal
             key={idx => idx}
-            data={mockFunds}
+            data={mockBanners}
             renderItem={({item}) => {
               return (
-                <FundsCard
-                  title={item.title}
-                  value={item.value}
-                  percentual={item.percentual}
-                  type={item.type}
-                  positive={item.positive}
-                />
+                <S.VerticalBanner>
+                  <S.VerticalBannerLabel>{item.title}</S.VerticalBannerLabel>
+                </S.VerticalBanner>
               );
             }}
           />
-        </S.ListContainer>
-        <Banner />
+        </S.ScrollView>
 
-        <Menu />
+        <Menu onPress={() => console.log('navigate')} />
       </S.Container>
     </S.SafeArea>
   );

@@ -33,28 +33,32 @@ export default function FundsCard({
         <S.NaturalIcon />
       )}
       <S.Label>{title}</S.Label>
-      <Svg height="100" width="100">
-        <Polyline
-          points={`${(20 / percentual).toString()}, ${(
-            300 / percentual
-          ).toString()}, ${(35 / percentual).toString()},${(
-            90 / percentual
-          ).toString()}, ${(80 / percentual).toString()},${(
-            200 / percentual
-          ).toString()}, ${(150 / percentual).toString()},${(
-            150 / percentual
-          ).toString()}, ${(250 / percentual).toString()}, ${(
-            300 / percentual
-          ).toString()}, ${(1000 / percentual).toString()}, ${(
-            200 / percentual
-          ).toString()}`}
-          fill="none"
-          stroke={
-            positive ? theme.palette.green.primary : theme.palette.red.secondary
-          }
-          strokeWidth="3"
-        />
-      </Svg>
+      <S.ChartContainer>
+        <Svg>
+          <Polyline
+            points={`${(1 / percentual).toString()}, ${(
+              400 / percentual
+            ).toString()}, ${(25 / percentual).toString()},${(
+              50 / percentual
+            ).toString()}, ${(90 / percentual).toString()},${(
+              250 / percentual
+            ).toString()}, ${(150 / percentual).toString()},${(
+              120 / percentual
+            ).toString()}, ${(350 / percentual).toString()}, ${(
+              250 / percentual
+            ).toString()}, ${(500 / percentual).toString()}, ${(
+              100 / percentual
+            ).toString()}`}
+            fill="none"
+            stroke={
+              positive
+                ? theme.palette.green.primary
+                : theme.palette.red.secondary
+            }
+            strokeWidth="3"
+          />
+        </Svg>
+      </S.ChartContainer>
 
       <S.ValuesContainer>
         <S.LabelValue>{value}</S.LabelValue>

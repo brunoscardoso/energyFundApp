@@ -7,7 +7,7 @@ import Menu from 'components/menu';
 
 import * as S from './styles';
 
-export default function Home() {
+export default function Home({navigation}) {
   const mockFunds = [
     {
       id: 1,
@@ -56,6 +56,7 @@ export default function Home() {
               renderItem={({item}) => {
                 return (
                   <FundsCard
+                    onPress={() => navigation.navigate('fundsDetails', item)}
                     title={item.title}
                     value={item.value}
                     percentual={item.percentual}

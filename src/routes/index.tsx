@@ -25,6 +25,10 @@ export default function Routes() {
           name={routesDefinitions.home.name}
           component={routesDefinitions.home.screen}
         />
+        <Stack.Screen
+          name={routesDefinitions.fundsDetails.name}
+          component={routesDefinitions.fundsDetails.screen}
+        />
       </Stack.Group>
     </Stack.Navigator>
   );

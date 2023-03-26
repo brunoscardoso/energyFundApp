@@ -1,6 +1,7 @@
 import Home from 'screens/home';
 import SignUp from 'screens/onboarding/signup';
 import Login from 'screens/onboarding/login';
+import FundsDetails from 'screens/fundsDetails';
 
 const routesDefinitions = {
   signup: {
@@ -14,6 +15,10 @@ const routesDefinitions = {
   home: {
     screen: Home,
     name: 'home',
+  },
+  fundsDetails: {
+    screen: FundsDetails,
+    name: 'fundsDetails',
   },
 };
 

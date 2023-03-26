@@ -17,4 +17,9 @@ export const Title = styled.Text`
   font-weight: 500;
 `;
 
+export const ListContainer = styled.View`
+  width: 100%;
+  height: 200px;
+`;
+
 export const ListFunds = styled.FlatList``;

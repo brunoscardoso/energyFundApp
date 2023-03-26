@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Header from 'components/header';
-
 import FundsCard from 'components/fundsCard';
+import Banner from 'components/banner';
 
 import * as S from './styles';
 
@@ -40,22 +40,26 @@ export default function Home() {
       <S.Container>
         <S.Title>Funds</S.Title>
 
-        <S.ListFunds
-          horizontal
-          key={idx => idx}
-          data={mockFunds}
-          renderItem={({item}) => {
-            return (
-              <FundsCard
-                title={item.title}
-                value={item.value}
-                percentual={item.percentual}
-                type={item.type}
-                positive={item.positive}
-              />
-            );
-          }}
-        />
+        <S.ListContainer>
+          <S.ListFunds
+            showsHorizontalScrollIndicator={false}
+            horizontal
+            key={idx => idx}
+            data={mockFunds}
+            renderItem={({item}) => {
+              return (
+                <FundsCard
+                  title={item.title}
+                  value={item.value}
+                  percentual={item.percentual}
+                  type={item.type}
+                  positive={item.positive}
+                />
+              );
+            }}
+          />
+        </S.ListContainer>
+        <Banner />
       </S.Container>
     </S.SafeArea>
   );

@@ -1,5 +1,15 @@
+interface GlobalState {
+  user: IUser;
+  menu: IMenu;
+}
+
 interface IUser {
-  id: number;
-  name: string;
-  balance: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+}
+
+interface IMenu {
+  route: string;
+  selected: string;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import NavigationHeader from 'components/navigationHeader';
+import Menu from 'components/menu';
 
 import * as S from './styles';
 import Chart from './components/chart';
@@ -23,6 +24,8 @@ export default function FundsDetails({route: {params}, navigation}: any) {
           />
         </S.Container>
       </S.ScrollView>
+
+      <Menu navigation={navigation} />
     </S.SafeAreaView>
   );
 }

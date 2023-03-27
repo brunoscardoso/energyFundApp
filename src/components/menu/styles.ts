@@ -11,6 +11,7 @@ export const Container = styled.View`
   flex-direction: row;
   background-color: white;
   justify-content: space-around;
+  margin-bottom: 12px;
 `;
 
 export const Button = styled.TouchableOpacity`

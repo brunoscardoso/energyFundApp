@@ -83,9 +83,8 @@ export default function Home({navigation}) {
             }}
           />
         </S.ScrollView>
-
-        <Menu onPress={() => console.log('navigate')} />
       </S.Container>
+      <Menu navigation={navigation} />
     </S.SafeArea>
   );
 }

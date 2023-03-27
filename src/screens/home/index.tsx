@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Header from 'components/header';
+import Header from 'components/headerX';
 import FundsCard from 'components/fundsCard';
 import Banner from 'components/banner';
 import Menu from 'components/menu';

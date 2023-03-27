@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 import {useDispatch} from 'react-redux';
 
-import Input from 'components/input';
+import Input from 'components/inputX';
 import Button from 'components/button';
 import AvoidKeyboard from 'components/avoidKeyboard';
 import TextButton from 'screens/onboarding/components/textButton';

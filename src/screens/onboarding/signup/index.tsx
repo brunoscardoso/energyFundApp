@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {useDispatch} from 'react-redux';
 
-import Input from 'components/input';
+import Input from 'components/inputX';
 import Button from 'components/button';
 import Checkbox from 'components/checkbox';
 import AvoidKeyboard from 'components/avoidKeyboard';

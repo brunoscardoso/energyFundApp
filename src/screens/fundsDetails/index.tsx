@@ -5,8 +5,56 @@ import Menu from 'components/menu';
 
 import * as S from './styles';
 import Chart from './components/chart';
+import BreakdownCarousel from './components/breakdownCarousel';
 
 export default function FundsDetails({route: {params}, navigation}: any) {
+  const menuItems = [
+    {
+      id: 1,
+      label: 'Highlighted',
+      items: [
+        {
+          id: 1,
+          title: 'Aspira',
+          description:
+            'Aspira is building a modular, direct air capture system with the energy supply integrated into the modules',
+          logo: require('assets/aspira_logo.png'),
+          banner: require('assets/aspira_banner.png'),
+        },
+        {
+          id: 2,
+          title: 'Climeworks',
+          description:
+            'uses renewable geothermal energy and waste heat to capture CO₂ directly from the air.',
+          logo: require('assets/climeworks_logo.png'),
+          banner: require('assets/climeworks_banner.png'),
+        },
+      ],
+    },
+    {
+      id: 2,
+      label: 'Value',
+      items: [
+        {
+          id: 1,
+          title: 'Aspira',
+          description:
+            'Aspira is building a modular, direct air capture system with the energy supply integrated into the modules',
+          logo: require('assets/aspira_logo.png'),
+          banner: require('assets/aspira_banner.png'),
+        },
+      ],
+    },
+    {
+      id: 3,
+      label: 'Vintage',
+    },
+    {
+      id: 4,
+      label: 'Registry',
+    },
+  ];
+
   return (
     <S.SafeAreaView>
       <NavigationHeader
@@ -23,7 +71,7 @@ export default function FundsDetails({route: {params}, navigation}: any) {
             value={params.value}
           />
 
-          <S.InfoStatsTitle>Info & Stats</S.InfoStatsTitle>
+          <S.Title>Info & Stats</S.Title>
           <S.InfoStatsContainer>
             <S.LeftContainer>
               <S.InfoContainer>
@@ -77,6 +125,9 @@ export default function FundsDetails({route: {params}, navigation}: any) {
               </S.InfoContainer>
             </S.RightContainer>
           </S.InfoStatsContainer>
+
+          <S.Title>Fund Breakdown</S.Title>
+          <BreakdownCarousel menuItems={menuItems} />
         </S.Container>
       </S.ScrollView>
 

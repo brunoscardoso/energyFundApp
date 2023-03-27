@@ -15,9 +15,9 @@ export const Container = styled.View`
   background-color: white;
 `;
 
-export const InfoStatsTitle = styled.Text`
+export const Title = styled.Text`
   margin: 24px 0 0 16px;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
 `;
 

@@ -6,6 +6,7 @@ import Menu from 'components/menu';
 import * as S from './styles';
 import Chart from './components/chart';
 import BreakdownCarousel from './components/breakdownCarousel';
+import Portfolio from './components/portfolio';
 
 export default function FundsDetails({route: {params}, navigation}: any) {
   const menuItems = [
@@ -128,6 +129,8 @@ export default function FundsDetails({route: {params}, navigation}: any) {
 
           <S.Title>Fund Breakdown</S.Title>
           <BreakdownCarousel menuItems={menuItems} />
+
+          <Portfolio />
         </S.Container>
       </S.ScrollView>
 

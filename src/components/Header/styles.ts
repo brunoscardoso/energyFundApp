@@ -6,7 +6,6 @@ import IconRewardSvg from 'assets/reward_icon.svg';
 import IconPercentualSvg from 'assets/arrow_up_right.svg';
 
 export const Container = styled.SafeAreaView`
-  margin-top: 3%;
   height: 20%;
   width: 100%;
   align-items: center;

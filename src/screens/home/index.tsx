@@ -16,6 +16,14 @@ export default function Home({navigation}) {
       percentual: 3.8,
       type: 'wind',
       positive: true,
+      infoStats: {
+        aum: '$430.88m',
+        vintageRange: '2019 - 2022',
+        priceAtClose: '$17.68',
+        issueDate: '18/04/2022',
+        ter: '0.15%',
+        priceAtOpen: '$1774',
+      },
     },
     {
       id: 2,
@@ -24,6 +32,14 @@ export default function Home({navigation}) {
       percentual: 2.9,
       type: 'solar',
       positive: false,
+      infoStats: {
+        aum: '$430.88m',
+        vintageRange: '2019 - 2022',
+        priceAtClose: '$17.68',
+        issueDate: '18/04/2022',
+        ter: '0.15%',
+        priceAtOpen: '$1774',
+      },
     },
     {
       id: 3,
@@ -32,6 +48,14 @@ export default function Home({navigation}) {
       percentual: 5,
       type: 'natural',
       positive: true,
+      infoStats: {
+        aum: '$430.88m',
+        vintageRange: '2019 - 2022',
+        priceAtClose: '$17.68',
+        issueDate: '18/04/2022',
+        ter: '0.15%',
+        priceAtOpen: '$1774',
+      },
     },
   ];
 

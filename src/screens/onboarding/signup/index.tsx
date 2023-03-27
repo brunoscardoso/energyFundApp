@@ -87,11 +87,16 @@ export default function SignUp({navigation}) {
         />
 
         <Checkbox
+          onPress={() => setTerms(!terms)}
           label="I am over 18 years of age and I have read and agree to the"
           labelUnderline="Terms of Service and Privacy policy"
         />
 
-        <Button label="Create account" onPress={() => handleSignup()} />
+        <Button
+          disabled={!terms}
+          label="Create account"
+          onPress={() => handleSignup()}
+        />
 
         <TextButton
           label={'Already have an account?'}
